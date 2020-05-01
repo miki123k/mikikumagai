@@ -91,30 +91,16 @@ input, textarea{
 }
 
 /*リセットCSSここまで*/
-html {
-    font-size: 62.5%;
-}
-body {
-    font-family : sans-serif , "Noto Sans Japanese";
-    background-color: #fff;
-    color: #333;
-    line-height: 1.5;
-    padding: 0;
-    overflow-wrap: break-word;
-}
 
+body {
+    font-family: sans-serif,"Noto Sans JP";
+    line-height: 1.5;
+}
 a {
     color: #0c419a;
 }
-ul , ol {
-    list-style-type: none;
-}
-p {
-    padding: 0;
-    margin: 0;
-    font-size: 1.6rem;
-    line-height: 1.88;
-}
+
+
 h1:before {
     content: "";
     background: url(NRI_images/bg-heading-h2.png) no-repeat;
@@ -126,16 +112,11 @@ h1:before {
     left: 0;
     top: 8px;
 }
-h3 {
-    font-size: 1.6rem;
-    line-height: 1.88;
-    padding: 0 10px;
-    width: calc(100%);
-}
+
 header{
     height: 65px;
     width: 100%;
-    min-width: 1500px;
+    max-width: 1500px;
     background-color: #fff;
     position: fixed;
     z-index: 10;
@@ -146,10 +127,12 @@ header{
     display: flex;
     align-items: center;
     height: 65px;
+    letter-spacing: normal;
 }
 .logo {
     width: 58px;
-    padding-left: 50px;
+    padding-left: 36px;
+    height: 29px;
 }
 
 .header-nav-list{
@@ -161,9 +144,7 @@ header{
     margin-left: auto;
 }
 
-.header-nav-list:nth-child(8){
-    margin-right: 100px;
-}
+
 
 .header-nav-list a{
     display: block;
@@ -179,17 +160,29 @@ header{
     font-size: 25px;
     color: #000;
 }
+/*　header部分のhover　*/
+.header-nav-list a:hover {
+    color: #0c419a;
+    border-bottom: 2px solid #0c419a;
+    transition: all 0.2s;
+}
+.header-nav-grobal:hover {
+    opacity: 0.5;
+}
 
 /* パンくずリスト始まり*/
+
 .breadcrumbs {                     
     width: 94%;
-    margin: 0 auto 25px auto;
+    margin: 0 85px 25px;
+    padding-top: 65px;
 }
 .breadcrumbs ol {
     display: flex;
+    list-style-type: none;
 }
 .breadcrumbs li {
-    font-size: 1.2rem;
+    font-size: 12px;
     color: #999;
     margin: 0 0 5px 0;
 }
@@ -198,10 +191,10 @@ header{
 }
 .breadcrumbs li::after {
     content: ">";
-    font-weight: 400;
     font-size: 6px;
     color: #231815;
-    margin: 0 2px 0 6px;
+    margin: 0 6px 0 6px;
+    text-align: center;
 }
 .breadcrumbs li:last-child::after {
     content: none;
@@ -233,14 +226,14 @@ header{
 }
 .top-title p:first-child {
     margin: 0;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.4;
 
 }
 .top-title p:last-child {
     margin: 16px 0 10px;
-    font-size: 2.8rem;
+    font-size: 28px;
     line-height: 1.5;
     font-weight: bold;
 }
@@ -269,16 +262,17 @@ header{
 .sns-list p {
     content: 'Share';
     font-family: Arial;
-    font-size: 1.2rem;
+    font-size: 12px;
     font-weight: 700;
     color: #666;
 }
 /* NRIのデジタルビジネス戦略 */
 .main h1 {
-    font-size: 2.2rem;
+    font-size: 22px;
     line-height: 1.5;
     padding: 0 0 0 32px;
     position: relative;
+    margin: 0 0 30px;
 }
 .main h1:before {
     content: "";
@@ -296,15 +290,17 @@ article {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
-    margin: 0 auto 120px auto;
+    margin: 0 auto 60px auto;
 }
-
+.main p {
+    font-size: 16px;
+}
 .main-comment1 {
-    font-size: 1.6rem;
+    font-size: 20px;
     line-height: 1.88;
 }
 .main-comment2 {
-    font-size: 1.6rem;
+    font-size: 28px;
     line-height: 1.88;
     margin-top: 16px;
 }
@@ -316,22 +312,18 @@ article {
 /*　デジタルが拓く近未来PDF*/
 .pdf {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.pdf p {
-    text-align: center;
-}
 .pdf a {
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.2;
     color: #fff;
     background: #005bac;
-    min-height: 50px;
-    padding: 15px 20px;
+    padding: 15px 15px;
     position: relative;
-    margin: 20px 0 60px;
-    text-align: center;
     display: inline-block;
+    margin-top: 40px;
 }
 
 .pdf a::before {
@@ -339,7 +331,7 @@ article {
     font-size: 10px;
     height: 10px;
     left: 10px;
-    margin: 25px 0;
+    margin: 15px 0;
     position: absolute;
 }
 
@@ -353,6 +345,11 @@ article {
     margin: 0 0 0 11px;
     vertical-align: -2px;
 }
+/* pdfのボタンのhover */
+.pdf a:hover {
+    opacity: 0.8;
+    transition: all 0.3s;
+}
 
 /* ビジネスモデルの特徴・人材が支えるNRI */
 .page {
@@ -363,10 +360,8 @@ article {
     margin-top: 60px
 }
 .page p {
-    margin-top: 60px;
     padding: 0;
-    margin: 0;
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.88;
 }
 .page a {
@@ -378,7 +373,7 @@ article {
 .text-left {
     text-align: left;
     padding: 0 10px;
-    width: calc(50%);
+    width: 50%;
 }
 .text-left::before{
     /* <を表示*/
@@ -414,7 +409,7 @@ article {
     background: #deecf8;
 }
 .main-list h2 {
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.88;
 }
 .main-fxb {
@@ -426,26 +421,29 @@ article {
 .main-fxb li {
     padding: 0;
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.88;
 }
 .list-fxb {
     width: calc(33.33333%);
     padding: 0 10px;
 }
+.fxb-height a {
+    height: 40px;
+}
 
 .main-fxb a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.2;
     text-align: center;
     color: #0c419a;
     background: #fff;
     position: relative;
     margin: 10px 10px 15px;
-    padding: 15px 20px 20px;
+    padding: 15px 20px 15px;
     border: solid 1px #ccc;
 }
 .main-fxb a::before {
@@ -459,30 +457,43 @@ article {
     left: 10px;
     margin: auto;
 }
+/* NRIの強みhover */
+.main-fxb a:hover {
+    background-color: #f0f0f0;
+    transition: all 0.3s;
+}
+.sns-wrap {
+    margin-bottom: 120px;
+}
 /* 企業情報 */
 section {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 }
 section h2 {
     padding: 18px 0 30px 0;
     border-top: 2px solid #333;
     border-bottom: 1px dotted #999;
     font-size: 20px;
+    position: relative;
 }
 
 .section-nav {
     padding: 30px 0;
-    position: relative;
     margin: 0 -10px;
+    position: relative;
+}
+.section-nav h3 {
+    font-size: 16px;
+    padding-left: 10px;
 }
 .section-nav::after {
     content: '';
     border-bottom: 1px dotted #999;
     height: 1px;
     position: absolute;
-    bottom: 0;
     left: 10px;
     width: calc(100% - 20px);
+    bottom: 0;
 }
 .section-list {
     display: flex;
@@ -500,7 +511,7 @@ section a {
     color: #0c419a;
 }
 .section-list a {
-    font-size: 1.4rem;
+    font-size: 14px;
     padding-left: 15px;
     color: #0c419a;
 }
@@ -509,10 +520,15 @@ section a {
     color: #999;
     width: 8px;
     height: 8px;
-    margin: 0 6px 0 0;
+    margin: 0 10px 0 0;
     padding-left: 15px;
     font-size: 10px;
 }
+/* 企業情報のhover */
+.section-list a:hover {
+    text-decoration: underline;
+}
+/* 前ページに戻る */
 .previous-page::before {
     content: "<";
     color: #999;
@@ -520,7 +536,7 @@ section a {
     height: 8px;
     margin: 0 6px 0 0;
     padding-left: 15px;
-    font-size: 10px;
+    font-size: 14px;
 }
 /*　Follow us　*/
 .sns-follow-list {
@@ -535,7 +551,7 @@ section a {
 }
 .sns-follow-list li {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 700;
     font-family: HelveticaNeue;
     margin: 0 0 0 40px;
@@ -557,7 +573,7 @@ section a {
 
 .menu-list a {
     color: #333;
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -571,18 +587,24 @@ section a {
 }
 .menu-list li::before{
     content: ">";
-    width: 8px;
-    height: 8px;
-    margin: 0 6px 0 0;
+    font-size: 5px;
+    margin-right: 15px;
 }
 .nav-list {
     padding: 12px 0;
 }
 
 .nav-list a {
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: 700;
     padding: 12px 0;
+}
+/* リストのhover */
+.nav-list a:hover {
+    text-decoration: underline;
+}
+.menu-list a:hover {
+    text-decoration: underline;
 }
 /* footer */
 footer {
@@ -595,7 +617,7 @@ footer {
 }
 .footer li {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 12px;
     margin: 0 1em 5px 0;
 }
 .footer a {

@@ -117,7 +117,7 @@ p {
 }
 h1:before {
     content: "";
-    background: url(../images/bg-heading-h2.png) no-repeat;
+    background: url(NRI_images/bg-heading-h2.png) no-repeat;
     background-size: contain;
     display: inline-block;
     width: 22px;
@@ -282,7 +282,7 @@ header{
 }
 .main h1:before {
     content: "";
-    background: url(../../../NRI_images/NRI_images/bg-heading-h2.png) no-repeat;
+    background: url(NRI_images/bg-heading-h2.png) no-repeat;
     background-size: auto;
     background-size: contain;
     display: inline-block;
@@ -345,7 +345,7 @@ article {
 
 .pdf p:last-child:after {
     content: "";
-    background: url(../../../NRI_images/NRI_images/icon-pdf.svg) no-repeat;
+    background: url(NRI_images/icon-pdf.svg) no-repeat;
     background-size: contain;
     display: inline-block;
     width: 16px;

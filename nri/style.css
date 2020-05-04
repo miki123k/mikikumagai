@@ -364,7 +364,6 @@ article {
 }
 .page a {
     color: #0c419a;
-    cursor: pointer;
     text-decoration: none;
 }
 
@@ -464,33 +463,20 @@ article {
     margin-bottom: 120px;
 }
 /* 企業情報 */
-section {
-    margin-bottom: 60px;
-}
+
 section h2 {
     padding: 18px 0 30px 0;
     border-top: 2px solid #333;
     border-bottom: 1px dotted #999;
     font-size: 20px;
 }
-
 .section-nav {
     padding: 30px 0;
-    
     position: relative;
+    border-bottom: 1px dotted #999;
 }
 .section-nav h3 {
     font-size: 16px;
-    padding-left: 10px;
-}
-.section-nav::after {
-    content: '';
-    border-bottom: 1px dotted #999;
-    height: 1px;
-    position: relative;
-    left: 0;
-    width: calc(100% - 20px);
-    bottom: 0;
 }
 .section-list {
     display: flex;
@@ -512,13 +498,13 @@ section a {
     color: #0c419a;
     width: calc(25%);
 }
-.section-list a::before {
+.section-nav:last-child {
+    margin-bottom: 60px;
+}
+.section-list li::before {
     content: ">";
     color: #999;
-    width: 8px;
-    height: 8px;
     margin: 0 10px 0 0;
-    padding-left: 15px;
     font-size: 10px;
 }
 /* 企業情報のhover */
@@ -529,11 +515,11 @@ section a {
 .previous-page::before {
     content: "<";
     color: #999;
-    width: 8px;
-    height: 8px;
-    margin: 0 6px 0 0;
-    padding-left: 15px;
+    margin: 0 10px 0 0;
     font-size: 14px;
+}
+.previous-page {
+    padding-bottom: 60px;
 }
 /*　Follow us　*/
 .sns-follow-list {

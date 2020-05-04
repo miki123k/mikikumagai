@@ -116,7 +116,6 @@ h1:before {
 header{
     height: 65px;
     width: 100%;
-    max-width: 1500px;
     background-color: #fff;
     position: fixed;
     z-index: 10;
@@ -203,7 +202,6 @@ header{
 
 /* top画像 */
 .top-image {
-    max-width: 100%;
     height: 250px;
     margin: 0 auto 30px auto;
     position: relative;
@@ -239,12 +237,12 @@ header{
 }
 /* main */
 .main-page {
-    max-width: 1000px;
-    margin: 0 auto 60px auto;
+    width: 1000px;
+    margin: 0 220px 60px;
 }
 .marketing {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
+    width: 800px;
+    margin: 0 100px 40px;
 }
 /* SNSリスト */
 .sns-list {
@@ -474,12 +472,11 @@ section h2 {
     border-top: 2px solid #333;
     border-bottom: 1px dotted #999;
     font-size: 20px;
-    position: relative;
 }
 
 .section-nav {
     padding: 30px 0;
-    margin: 0 -10px;
+    
     position: relative;
 }
 .section-nav h3 {
@@ -490,8 +487,8 @@ section h2 {
     content: '';
     border-bottom: 1px dotted #999;
     height: 1px;
-    position: absolute;
-    left: 10px;
+    position: relative;
+    left: 0;
     width: calc(100% - 20px);
     bottom: 0;
 }
@@ -512,8 +509,8 @@ section a {
 }
 .section-list a {
     font-size: 14px;
-    padding-left: 15px;
     color: #0c419a;
+    width: calc(25%);
 }
 .section-list a::before {
     content: ">";
@@ -563,8 +560,8 @@ section a {
 }
 /* Follow usから下の部分のリスト */
 .menu-nav {
-    max-width: 1286px;
     margin: 40px auto;
+    width: 1286px;
     padding-bottom: 60px;
     border-bottom: 1px solid #ccc;
     display: flex;
@@ -611,7 +608,7 @@ footer {
     padding: 0 0 112px;
 }
 .footer {
-    max-width: 1000px;
+    width: 1000px;
     margin: 70px auto 15px auto;
     font-size: 0;
 }
@@ -629,7 +626,7 @@ footer {
 }
 /* コピーライト */
 .small {
-    max-width: 1000px;
+    width: 1000px;
     margin: 0 auto;
     font-family: HelveticaNeue;
     font-size: 10px;

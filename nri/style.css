@@ -143,12 +143,10 @@ header{
     margin-left: auto;
 }
 
-
-
 .header-nav-list a{
     display: block;
-    line-height: 65px;
     color: #000;
+    line-height: 65px;
 }
 
 .header-nav-grobal {
@@ -213,8 +211,7 @@ header{
 }
 /* top画像上に重ねるタイトル */
 .top-title {
-    width: 100%;
-    max-width: 1000px;
+    width: 1000px;
     position: absolute;
     top: 40px;
     left: 0;
@@ -304,7 +301,7 @@ article {
 }
 .main img {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     margin-top: 30px
 }
 /*　デジタルが拓く近未来PDF*/
@@ -312,16 +309,18 @@ article {
     text-align: center;
     margin-bottom: 20px;
 }
-
+.pdf p {
+    margin-left: 8px;
+}
 .pdf a {
     font-size: 16px;
     line-height: 1.2;
     color: #fff;
     background: #005bac;
     padding: 15px 15px;
-    position: relative;
     display: inline-block;
     margin-top: 40px;
+    position: relative;
 }
 
 .pdf a::before {
@@ -329,8 +328,8 @@ article {
     font-size: 10px;
     height: 10px;
     left: 10px;
-    margin: 15px 0;
     position: absolute;
+    top: 30px;
 }
 
 .pdf p:last-child:after {
@@ -484,7 +483,7 @@ section h2 {
 }
 
 .section-list li {
-    width: calc(25%);
+    width: 25%;
     margin: 20px 0 0 0;
 }
 section p {
@@ -563,7 +562,7 @@ section a {
 .menu-list {
     flex-direction: column;
     flex: auto;
-    width: calc(25%);   
+    width: 25%;   
 }
 .menu-list li {
     margin: 13px 0 16px 0;

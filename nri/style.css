@@ -115,7 +115,7 @@ h1:before {
 
 header{
     height: 65px;
-    width: 100%;
+    width: 1440px;
     background-color: #fff;
     position: fixed;
     z-index: 10;
@@ -170,7 +170,7 @@ header{
 /* パンくずリスト始まり*/
 
 .breadcrumbs {                     
-    width: 94%;
+    width: 1270px;
     margin: 0 85px 25px;
     padding-top: 65px;
 }
@@ -205,7 +205,7 @@ header{
     position: relative;
 }
 .top-image img {
-    width: 100%;
+    width: 1440px;
     height: 250px;  
     object-fit: cover;
 }
@@ -284,7 +284,7 @@ header{
 article {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    width: 800px;
     margin: 0 auto 60px auto;
 }
 .main p {
@@ -301,7 +301,7 @@ article {
 }
 .main img {
     height: auto;
-    width: 100%;
+    width: 800px;
     margin-top: 30px
 }
 /*　デジタルが拓く近未来PDF*/

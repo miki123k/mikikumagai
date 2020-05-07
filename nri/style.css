@@ -1,0 +1,623 @@
+@charset "utf-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+    color: #333;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+li{
+    list-style: none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+input, textarea{
+    border: none;
+    outline: none;
+}
+
+/*リセットCSSここまで*/
+
+body {
+    font-family: sans-serif,"Noto Sans JP";
+    line-height: 1.5;
+}
+a {
+    color: #0c419a;
+}
+
+
+h1:before {
+    content: "";
+    background: url(NRI_images/bg-heading-h2.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+header{
+    height: 65px;
+    width: 1440px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    letter-spacing: normal;
+}
+.logo {
+    width: 58px;
+    padding-left: 36px;
+    height: 29px;
+}
+
+.header-nav-list{
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 20px;
+}
+.header-nav li:nth-child(2){
+    margin-left: auto;
+}
+
+.header-nav-list a{
+    display: block;
+    color: #000;
+    line-height: 65px;
+}
+
+.header-nav-grobal {
+    padding: 0px 18px;
+}
+
+.fas{
+    font-size: 25px;
+    color: #000;
+}
+/*　header部分のhover　*/
+.header-nav-list a:hover {
+    color: #0c419a;
+    border-bottom: 2px solid #0c419a;
+    transition: all 0.2s;
+}
+.header-nav-grobal:hover {
+    opacity: 0.5;
+}
+
+/* パンくずリスト始まり*/
+
+.breadcrumbs {                     
+    width: 1270px;
+    margin: 0 85px 25px;
+    padding-top: 65px;
+}
+.breadcrumbs ol {
+    display: flex;
+    list-style-type: none;
+}
+.breadcrumbs li {
+    font-size: 12px;
+    color: #999;
+    margin: 0 0 5px 0;
+}
+.breadcrumbs a {
+    color: #999;
+}
+.breadcrumbs li::after {
+    content: ">";
+    font-size: 6px;
+    color: #231815;
+    margin: 0 6px 0 6px;
+    text-align: center;
+}
+.breadcrumbs li:last-child::after {
+    content: none;
+}                                 
+/*パンくずリストここまで*/
+
+/* top画像 */
+.top-image {
+    height: 250px;
+    margin: 0 auto 30px auto;
+    position: relative;
+}
+.top-image img {
+    width: 1440px;
+    height: 250px;  
+    object-fit: cover;
+}
+/* top画像上に重ねるタイトル */
+.top-title {
+    width: 1000px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #ffffff;
+}
+.top-title p:first-child {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+
+}
+.top-title p:last-child {
+    margin: 16px 0 10px;
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+/* main */
+.main-page {
+    width: 1000px;
+    margin: 0 220px 60px;
+}
+.marketing {
+    width: 800px;
+    margin: 0 100px 40px;
+}
+/* SNSリスト */
+.sns-list {
+    width: 172px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 auto;
+}
+.sns-size {
+    width: 24px;
+    height: 24px;
+}
+.sns-list p {
+    content: 'Share';
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+}
+/* NRIのデジタルビジネス戦略 */
+.main h1 {
+    font-size: 22px;
+    line-height: 1.5;
+    padding: 0 0 0 32px;
+    position: relative;
+    margin: 0 0 30px;
+}
+.main h1:before {
+    content: "";
+    background: url(NRI_images/bg-heading-h2.png) no-repeat;
+    background-size: auto;
+    background-size: contain;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 5px
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 0 auto 60px auto;
+}
+.main p {
+    font-size: 16px;
+}
+.main-comment1 {
+    font-size: 20px;
+    line-height: 1.88;
+}
+.main-comment2 {
+    font-size: 28px;
+    line-height: 1.88;
+    margin-top: 16px;
+}
+.main img {
+    height: auto;
+    width: 800px;
+    margin-top: 30px
+}
+/*　デジタルが拓く近未来PDF*/
+.pdf {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pdf p {
+    margin-left: 8px;
+}
+.pdf a {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
+    background: #005bac;
+    padding: 15px 15px;
+    display: inline-block;
+    margin-top: 40px;
+    position: relative;
+}
+
+.pdf a::before {
+    content: ">";
+    font-size: 10px;
+    height: 10px;
+    left: 10px;
+    position: absolute;
+    top: 30px;
+}
+
+.pdf p:last-child:after {
+    content: "";
+    background: url(NRI_images/icon-pdf.svg) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 11px;
+    vertical-align: -2px;
+}
+/* pdfのボタンのhover */
+.pdf a:hover {
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+/* ビジネスモデルの特徴・人材が支えるNRI */
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 820px;
+    height: 30px;
+    margin-top: 60px
+}
+.page p {
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.88;
+}
+.page a {
+    color: #0c419a;
+    text-decoration: none;
+}
+
+.text-left {
+    text-align: left;
+    padding: 0 10px;
+    width: 50%;
+}
+.text-left::before{
+    /* <を表示*/
+    content: '<';
+    font-size: 16px;
+    margin: 0 3px 0 6px;
+    color: #231815;
+    position: relative;
+    bottom: 1px;
+}
+.text-right {
+    text-align: right;
+    padding: 0 10px;
+    width: 50%;
+}
+.text-right::after{  
+    /* >を表示*/
+    content: '>';
+    font-size: 16px;
+    margin: 0 3px 0 6px;
+    color: #231815;
+    position: relative;
+    bottom: 1px;
+}
+
+
+/* NRIの強み */
+.main-list {
+    padding: 20px;
+    margin-top: 40px;
+    width: 760px;
+    height: 201px;
+    background: #deecf8;
+}
+.main-list h2 {
+    font-size: 16px;
+    line-height: 1.88;
+}
+.main-fxb {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.main-fxb li {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.88;
+}
+.list-fxb {
+    width: calc(33.33333%);
+    padding: 0 10px;
+}
+.fxb-height a {
+    height: 40px;
+}
+
+.main-fxb a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: #0c419a;
+    background: #fff;
+    position: relative;
+    margin: 10px 10px 15px;
+    padding: 15px 20px 15px;
+    border: solid 1px #ccc;
+}
+.main-fxb a::before {
+    content: ">";
+    color: #231815;
+    font-size: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+}
+/* NRIの強みhover */
+.main-fxb a:hover {
+    background-color: #f0f0f0;
+    transition: all 0.3s;
+}
+.sns-wrap {
+    margin-bottom: 120px;
+}
+/* 企業情報 */
+
+section h2 {
+    padding: 18px 0 30px 0;
+    border-top: 2px solid #333;
+    border-bottom: 1px dotted #999;
+    font-size: 20px;
+}
+.section-nav {
+    padding: 30px 0;
+    position: relative;
+    border-bottom: 1px dotted #999;
+}
+.section-nav h3 {
+    font-size: 16px;
+}
+.section-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-list li {
+    width: 25%;
+    margin: 20px 0 0 0;
+}
+section p {
+    margin: -60px 0 0 0;
+}
+section a {
+    color: #0c419a;
+}
+.section-list a {
+    font-size: 14px;
+    color: #0c419a;
+    width: calc(25%);
+}
+.section-nav:last-child {
+    margin-bottom: 60px;
+}
+.section-list li::before {
+    content: ">";
+    color: #999;
+    margin: 0 10px 0 0;
+    font-size: 10px;
+}
+/* 企業情報のhover */
+.section-list a:hover {
+    text-decoration: underline;
+}
+/* 前ページに戻る */
+.previous-page::before {
+    content: "<";
+    color: #999;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+}
+.previous-page {
+    padding-bottom: 60px;
+}
+/*　Follow us　*/
+.sns-follow-list {
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0;
+}
+.sns-follow-list li:first-child {
+    color: #333;
+}
+.sns-follow-list li {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: HelveticaNeue;
+    margin: 0 0 0 40px;
+}
+
+.sns-follow {
+    width: 28px;
+    height: 28px;
+}
+/* Follow usから下の部分のリスト */
+.menu-nav {
+    margin: 40px auto;
+    width: 1286px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-list a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.menu-list {
+    flex-direction: column;
+    flex: auto;
+    width: 25%;   
+}
+.menu-list li {
+    margin: 13px 0 16px 0;
+}
+.menu-list li::before{
+    content: ">";
+    font-size: 5px;
+    margin-right: 15px;
+}
+.nav-list {
+    padding: 12px 0;
+}
+
+.nav-list a {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 0;
+}
+/* リストのhover */
+.nav-list a:hover {
+    text-decoration: underline;
+}
+.menu-list a:hover {
+    text-decoration: underline;
+}
+/* footer */
+footer {
+    padding: 0 0 112px;
+}
+.footer {
+    width: 1000px;
+    margin: 70px auto 15px auto;
+    font-size: 0;
+}
+.footer li {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 1em 5px 0;
+}
+.footer a {
+    color: #999;
+}
+.footer-list::before {
+    content: "｜";
+    margin: 0px 1em 0px 0px;
+}
+/* fotterのhover */
+.footer a:hover {
+    text-decoration: underline;
+}
+/* コピーライト */
+.small {
+    width: 1000px;
+    margin: 0 auto;
+    font-family: HelveticaNeue;
+    font-size: 10px;
+    color: #333;
+}

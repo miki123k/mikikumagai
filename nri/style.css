@@ -609,6 +609,10 @@ footer {
     content: "｜";
     margin: 0px 1em 0px 0px;
 }
+/* fotterのhover */
+.footer a:hover {
+    text-decoration: underline;
+}
 /* コピーライト */
 .small {
     width: 1000px;

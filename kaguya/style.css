@@ -90,6 +90,8 @@ body {
     font-family: "Noto Sans", sans-serif;
     color: #3B3B3B;
     width: 1280px;
+    margin: 0 auto;
+    background-color: #FCFCFC;
 }
 
 /* header */

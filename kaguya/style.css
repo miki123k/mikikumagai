@@ -1,0 +1,428 @@
+@charset "utf-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+    color: #333;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+li{
+    list-style: none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+/* リセットCSSここまで */
+
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    color: #3B3B3B;
+    width: 1280px;
+}
+
+/* header */
+header {
+    height: 56px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.header-logo {
+    margin-top: 16px;
+    margin-left: 96px;
+    width: 38px;
+    height: 24px;
+}
+.header-nav {
+    display: flex;
+    margin: 26px 96px 8px 652.51px;
+}
+.header-nav li {
+    margin-right: 56px;
+}
+
+.header-nav li:last-of-type {
+    margin-right: 0;
+}
+.header-nav a {
+    color: #B2B2B2;
+}
+/* トップ画像 */
+.top-page {
+    background-image: url("kaguya_images/home_top/home_top.png");
+    background-size: cover;
+    height: 744px;
+    width: 1280px;
+}
+.top-page h1 {
+    background-color: #FFFFFF;
+    width: 609px;
+    height: 137px;
+    opacity: 0.8;
+    color: #918F89;
+    font-size: 53px;
+    letter-spacing: 2.65px;
+    line-height: 137px;
+    padding-left: 88px;
+    font-weight: normal;
+    position: relative;
+    top: 274px;
+}
+
+/* 暮らしを提案する */
+section:first-of-type {
+    display: flex;
+    margin-top: 80px;
+}
+.first-section-image {
+    background-image: url("kaguya_images/concept/concept.png");
+    width: 560px;
+    height: 560px;
+    margin-left: 88px;
+}
+.about-brand h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 240px 0 71px 56px;
+    letter-spacing: 2.5px;
+}
+.about-brand p {
+    margin-top: 71px;
+    margin-left: 56px;
+    font-size: 12px;
+    letter-spacing: 0.36px;
+    line-height: 30px;
+}
+
+/* news */
+.news-wrapper {
+    margin-top: 240px;
+}
+.news-wrapper h3 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 23px;
+    margin-bottom: 48px;
+    letter-spacing: 2.3px;
+}
+.news-list {
+    display: flex;
+    margin: 0 96px 32px;
+}
+.news-list li {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+.news-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /*黒の半透明のフィルターをかける*/
+}
+.news-list p {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 17px;
+    text-shadow: 0px 0px 6px #000000E0;
+}
+/* news　アームストロングのカウチ入荷　*/
+.news-list li:first-of-type {
+    background-image: url("kaguya_images/news01/news01.png");
+    margin-right: 64px;
+}
+.news-list p:first-of-type {
+    top: 144.19px;
+    left: 47px;
+}
+/* news　アームストロングのチェア再入荷　*/
+.news-list li:nth-of-type(2) {
+    background-image: url("kaguya_images/news02/news02.png");
+    margin-right: 64px;
+}
+.news-list p:nth-of-type(2) {
+    top: 143px;
+    left: 39.5px;
+}
+/* news　アームストロングのテーブル入荷　*/
+.news-list li:nth-of-type(3) {
+    background-image: url("kaguya_images/news03/news03.png");
+}
+.news-list p:nth-of-type(3) {
+    top: 41px;
+    left: 141px;
+}
+/*　newsのview more */
+.news-wrapper p {
+    text-align: center;
+}
+.news-wrapper a {
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    color: #3B3B3B;
+    opacity: 0.3;
+    position: relative;
+}
+.news-wrapper a::after {
+    content: ">";
+    position: absolute;
+    left: 105px;
+    top: 5px;
+    font-size: 10px;
+}
+/* 公式カタログ */
+.catalog-wrapper {
+    margin-top: 240px;
+    text-align: center;
+}
+.catalog-wrapper h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 2.4px;
+}
+.catalog-comment {
+    text-align: center;
+    margin: 48px 0 40px;
+}
+.catalog-wrapper p {
+    letter-spacing: 0.45px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.catalog-btn {
+    display: inline-block;
+    background-color: #D1D1D1;
+    border-radius: 40px;
+    width: 344px;
+    height: 56px;
+    text-align: center;
+}
+.catalog-btn p {
+    font-size: 18px;
+    color: #707070;
+    letter-spacing: 1.8px;
+    line-height: 53px;
+}
+
+
+
+/* CONTACT */
+.contact-wrapper {
+    margin-top: 259px;
+}
+.contact-wrapper h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 47px;
+    letter-spacing: 2.4px;
+}
+/* contact フォーム */
+form {
+    margin-bottom: 42px;
+    text-align: center;
+}
+.contact-text {
+    width: 454px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    opacity: 0.6;
+    margin: 0 auto 24px;
+    display: block;
+}
+.contact-text::placeholder {
+    letter-spacing: 0.6px;
+    color: #3B3B3B;
+    opacity: 0.4;
+    font-size: 12px;
+    padding: 10px 0 10px 16px;
+}
+textarea { /* 問い合わせ内容 */
+    width: 454px;
+    height: 200px;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    opacity: 0.6;
+    letter-spacing: 0.6px;
+    color: rgba(3,3,3,0.4);
+}
+textarea::placeholder {
+    letter-spacing: 0.6px;
+    color: #3B3B3B;
+    opacity: 0.4;
+    padding: 10px 0 0 16px;
+    font-size: 12px;
+}
+.contact-submit { /* 送信ボタン */
+    width: 161px;
+    height: 32px;
+    background-color: #D1D1D1;
+    border-radius: 16px;
+    display: block;
+    margin: 40px auto 0;
+    letter-spacing: 1.4px;
+    color: #707070;
+    opacity: 1;
+    font-size: 14px;
+}
+
+/* RECRUIT */
+.recruit-wrapper {
+    margin-top: 246px;
+}
+.recruit-wrapper h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 47px;
+    letter-spacing: 2.4px;
+}
+
+.recruitcomment {
+    text-align: center;
+}
+.recruitcomment p {
+    letter-spacing: 0.45px;
+    font-size: 15px;
+    line-height: 30px;
+}
+/* recruitのview more */
+.recruit-wrapper p {
+    text-align: center;
+    margin-top: 39px;
+}
+.recruit-wrapper a {
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    color: #3B3B3B;
+    opacity: 0.3;
+    position: relative;
+}
+.recruit-wrapper a::after {
+    content: ">";
+    position: absolute;
+    left: 105px;
+    top: 5px;
+    font-size: 8px;
+}
+
+/* footer */
+.footer-wrapper {
+    height: 240px;
+    margin-top: 320px;
+    background-color: #918F89;
+    color: #FFFFFF;
+}
+.footer-item {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav {
+    display: flex;
+    margin-top: 120px;
+}
+.footer-logo {
+    width: 64px;
+    height: 40px;
+    margin-left: 240px;
+    margin-top: 120px;
+}
+.footer-nav li {
+    margin-right: 32px;
+    font-size: 18px;
+    height: 24px;
+}
+.footer-nav li:last-of-type {
+    margin-right: 224px;
+}
+.footer-nav a {
+    color: #FFFFFF;
+}
+.footer-wrapper small {
+    font-size: 11px;
+    margin: 41px auto 24px;
+    display: block;
+    text-align: center;
+}

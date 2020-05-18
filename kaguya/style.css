@@ -425,8 +425,11 @@ textarea::placeholder {
     font-size: 18px;
     height: 24px;
 }
+.footer-nav li:first-of-type {
+    margin-left: 17px;
+}
 .footer-nav li:last-of-type {
-    margin-right: 224px;
+    margin-right: 192px;
 }
 .footer-nav a {
     color: #FFFFFF;

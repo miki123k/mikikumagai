@@ -204,32 +204,38 @@ section:first-of-type {
     color: #FFFFFF;
     font-size: 17px;
     text-shadow: 0px 0px 6px #000000E0;
+    letter-spacing: -0.85px;
 }
 /* news　アームストロングのカウチ入荷　*/
-.news-list li:first-of-type {
+.news-list li:first-of-type {/* 画像部分 */
     background-image: url("kaguya_images/news01/news01.png");
     margin-right: 64px;
 }
-.news-list p:first-of-type {
+
+.news-list li:first-of-type p {/* テキスト部分 */
     top: 144.19px;
     left: 47px;
 }
+
 /* news　アームストロングのチェア再入荷　*/
-.news-list li:nth-of-type(2) {
+.news-list li:nth-of-type(2) {/* 画像部分 */
     background-image: url("kaguya_images/news02/news02.png");
     margin-right: 64px;
 }
-.news-list p:nth-of-type(2) {
+
+.news-list li:nth-of-type(2) p {/* テキスト部分 */
     top: 143px;
     left: 39.5px;
 }
+
 /* news　アームストロングのテーブル入荷　*/
-.news-list li:nth-of-type(3) {
+.news-list li:nth-of-type(3) {/* 画像部分 */
     background-image: url("kaguya_images/news03/news03.png");
 }
-.news-list p:nth-of-type(3) {
-    top: 41px;
-    left: 141px;
+
+.news-list li:nth-of-type(3) p {/* テキスト部分 */
+    top: 141px;
+    left: 41px;
 }
 /*　newsのview more */
 .news-wrapper p {

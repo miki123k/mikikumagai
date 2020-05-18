@@ -84,8 +84,9 @@ hr {
 }
 
 /* リセットCSSここまで */
-
-
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Noto Sans", sans-serif;
     color: #3B3B3B;
@@ -128,20 +129,21 @@ header {
     background-size: cover;
     height: 744px;
     width: 1280px;
+    position: relative;
 }
+
 .top-page h1 {
     background-color: #FFFFFF;
+    opacity: 0.8;
     width: 609px;
     height: 137px;
-    opacity: 0.8;
+    position: absolute;
+    top: 274px;
     color: #918F89;
     font-size: 53px;
-    letter-spacing: 2.65px;
-    line-height: 137px;
-    padding-left: 88px;
     font-weight: normal;
-    position: relative;
-    top: 274px;
+    padding: 32px 32px 32px 88px;
+    line-height: 73px;
 }
 
 /* 暮らしを提案する */
@@ -311,13 +313,13 @@ form {
     opacity: 0.6;
     margin: 0 auto 24px;
     display: block;
+    padding: 10px 16px;
 }
 .contact-text::placeholder {
     letter-spacing: 0.6px;
     color: #3B3B3B;
     opacity: 0.4;
-    font-size: 12px;
-    padding: 10px 0 10px 16px;
+    font-size: 12px;   
 }
 textarea { /* 問い合わせ内容 */
     width: 454px;
@@ -328,12 +330,14 @@ textarea { /* 問い合わせ内容 */
     opacity: 0.6;
     letter-spacing: 0.6px;
     color: rgba(3,3,3,0.4);
+    font-size: 12px;
+    padding: 10px 16px;
 }
+
 textarea::placeholder {
     letter-spacing: 0.6px;
     color: #3B3B3B;
     opacity: 0.4;
-    padding: 10px 0 0 16px;
     font-size: 12px;
 }
 .contact-submit { /* 送信ボタン */

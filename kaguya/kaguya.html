@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="We propose a life.私たちは、家具を売るのではなく、お客様の理想とする 「暮らし」を提案します。 仕事で疲れた後に帰りたくなる、 今日も１日頑張ろうと思える、 そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。">
+    <meta name="description"
+        content="We propose a life.私たちは、家具を売るのではなく、お客様の理想とする 「暮らし」を提案します。 仕事で疲れた後に帰りたくなる、 今日も１日頑張ろうと思える、 そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。">
     <link rel="stylesheet" href="style.css">
     <title>HTMLCSS</title>
 </head>
+
 <body>
     <!-- ヘッダー -->
     <header>
@@ -24,52 +27,63 @@
     <!-- メイン -->
     <main>
         <!-- top画像・タイトル　CSSで背景画像挿入する -->
-        <h1>We propose a life.</h1>
+        <div class="top-page">
+            <h1>We propose a life.</h1>
+        </div>
         <section>
-            <h2>暮らしを提案する。</h2>
+            <div class="first-section-image"></div>
             <div class="about-brand">
+                <h2>暮らしを提案する。</h2>
                 <p>私たちは、家具を売るのではなく、お客様の理想とする <br>
-                「暮らし」を提案します。<br>
-                仕事で疲れた後に帰りたくなる、<br>
-                今日も１日頑張ろうと思える、<br>
-                そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。</p>
+                    「暮らし」を提案します。<br>
+                    仕事で疲れた後に帰りたくなる、<br>
+                    今日も１日頑張ろうと思える、<br>
+                    そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。</p>
             </div>
         </section>
         <!--  NEWS  -->
-        <section>
+        <section class="news-wrapper">
             <h3>NEWS</h3>
             <ul class="news-list">
-                <li>アームストロングのカウチ入荷</li>
-                <li>アームストロングのチェア再入荷</li>
-                <li>アームストロングのテーブル入荷</li>
+                <li>
+                    <p>アームストロングのカウチ入荷</p>
+                </li>
+                <li>
+                    <p>アームストロングのチェア再入荷</p>
+                </li>
+                <li>
+                    <p>アームストロングのテーブル入荷</p>
+                </li>
             </ul>
             <p><a href="news/index.html">view more</a></p>
         </section>
         <!--  公式カタログ  -->
-        <section>
+        <section class="catalog-wrapper">
             <h3>公式カタログ</h3>
             <div class="catalog-comment">
-                <p>様々なスタイルをご提案いたします。オーダーメイドも可能です。 </p>
-                <p>詳しくはカタログをご覧ください。</p>
+                <p>様々なスタイルをご提案いたします。オーダーメイドも可能です。<br>
+                    詳しくはカタログをご覧ください。</p>
             </div>
-            <a href="catalog.pdf"><p>カタログをダウンロード</p></a>
+            <a class="catalog-btn" href="catalog.pdf">
+                <p>カタログをダウンロード</p>
+            </a>
         </section>
         <!--  CONTACT  -->
-        <section>
+        <section class="contact-wrapper">
             <h3>CONTACT</h3>
             <form>
-                <input type="text" name="yourname" placeholder="お名前">
-                <input type="text" name="address" placeholder="メールアドレス">
+                <input class="contact-text" type="text" name="yourname" placeholder="お名前">
+                <input class="contact-text" type="text" name="address" placeholder="メールアドレス">
                 <textarea placeholder="お問い合わせ内容"></textarea>
                 <input class="contact-submit" type="submit" value="SEND">
             </form>
         </section>
         <!--  RECRUIT  -->
-        <section>
+        <section class="recruit-wrapper">
             <h3>RECRUIT</h3>
             <div class="recruitcomment">
                 <p>現在Staffを募集しております。 <br>
-                詳しくは詳細ページをご覧ください。</p>
+                    詳しくは詳細ページをご覧ください。</p>
             </div>
             <p><a href="recruit/index.html">view more</a></p>
         </section>
@@ -77,15 +91,18 @@
     <!--  フッター  -->
     <footer>
         <div class="footer-wrapper">
-            <img src="kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
-            <ul class="footer-nav">
-                <li>HOME</li>
-                <li><a href="news/index.html">NEWS</a></li>
-                <li><a href="recruit/index.html">RECRUIT</a></li>
-                <li><a href="contact/index.html">CONTACT</a></li>
-            </ul>
+            <div class="footer-item">
+                <img  class="footer-logo" src="kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
+                <ul class="footer-nav">
+                    <li>HOME</li>
+                    <li><a href="news/index.html">NEWS</a></li>
+                    <li><a href="recruit/index.html">RECRUIT</a></li>
+                    <li><a href="contact/index.html">CONTACT</a></li>
+                </ul>
+            </div>
             <small>©HTMLCSS.code</small>
         </div>
     </footer>
 </body>
+
 </html>

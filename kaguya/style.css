@@ -133,8 +133,7 @@ header {
 }
 
 .top-page h1 {
-    background-color: #FFFFFF;
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.8);
     width: 609px;
     height: 137px;
     position: absolute;

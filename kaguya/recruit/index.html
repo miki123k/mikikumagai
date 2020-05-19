@@ -25,15 +25,17 @@
     </header>
     <main>
         <!-- top画像・タイトル　CSSで背景画像挿入する -->
-        <h1>RECRUIT</h1>
+        <div class="top-page">
+            <h1>RECRUIT</h1>
+        </div>
         <section>
             <h2>採用情報</h2>
             <table>
                 <tr>
                     <th rowspan="3">販売員</th>
                     <td>
-                        <p class="jobinformation">仕事内容</p>
-                        <ul>
+                        <p class="job-information">仕事内容</p>
+                        <ul class="job-contents">
                             <li>海外から輸入している家具の販売</li>
                             <li>商品管理</li>
                             <li>オーダーメイド家具の発注</li>
@@ -42,22 +44,26 @@
                 </tr>
                 <tr>
                     <td>
-                        <p class="jobinformation">時給</p>
-                        <p>1,200円〜</p>
+                        <p class="job-information">時給</p>
+                        <div class="job-description">
+                            <p>1,200円〜</p>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p class="jobinformation">勤務時間</p>
-                        <p>10:00 - 19:00（1時間休憩）</p>
-                        <p>週3〜5日</p>
+                        <p class="job-information">勤務時間</p>
+                        <div class="job-description">
+                            <p>10:00 - 19:00（1時間休憩）</p>
+                            <p>週3〜5日</p>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <th rowspan="3">家具職人</th>
                     <td>
-                        <p class="jobinformation">仕事内容</p>
-                        <ul>
+                        <p class="job-information">仕事内容</p>
+                        <ul class="job-contents">
                             <li>家具作成に必要な材料の発注</li>
                             <li>商品管理 ・オーダーメイド家具の相談</li>
                             <li>オーダーメイド家具のディレクション</li>
@@ -67,15 +73,19 @@
                 </tr>
                 <tr>
                     <td>
-                        <p class="jobinformation">月給</p>
-                        <p>35万円〜</p>
+                        <p class="job-information">月給</p>
+                        <div class="job-description">
+                            <p>35万円〜</p>
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p class="jobinformation">勤務時間</p>
-                        <p>10:00 - 19:00（1時間休憩）</p>
-                        <p>週3〜5日</p>
+                        <p class="job-information">勤務時間</p>
+                        <div class="job-description">
+                            <p>10:00 - 19:00（1時間休憩）</p>
+                            <p>週3〜5日</p>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -83,13 +93,15 @@
     </main>
     <footer>
         <div class="footer-wrapper">
-            <img src="../kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
-            <ul class="footer-nav">
-                <li><a href="../kaguya.html">HOME</a></li>
-                <li><a href="../news/index.html">NEWS</a></li>
-                <li>RECRUIT</li>
-                <li><a href="../contact/index.html">CONTACT</a></li>
-            </ul>
+            <div class="footer-item">
+                <img class="footer-logo" src="../kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
+                <ul class="footer-nav">
+                    <li><a href="../kaguya.html">HOME</a></li>
+                    <li><a href="../news/index.html">NEWS</a></li>
+                    <li>RECRUIT</li>
+                    <li><a href="../contact/index.html">CONTACT</a></li>
+                </ul>
+            </div>
             <small>©HTMLCSS.code</small>
         </div>
     </footer>

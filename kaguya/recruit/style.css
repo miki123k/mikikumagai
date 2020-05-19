@@ -30,9 +30,10 @@ footer,header,hgroup,menu,nav,section {
 nav ul {
     list-style:none;
 }
-li{
+li {
     list-style: none;
 }
+
 blockquote, q {
     quotes:none;
 }
@@ -124,93 +125,74 @@ header {
 }
 /* トップ画像 */
 .top-page {
-    background-image: url("../kaguya_images/news_top/news_top.png");
+    background-image: url("../kaguya_images/recruit_top/recruit_top.png");
     background-size: cover;
     height: 456px;
     width: 1280px;
     position: relative;
 }
 .top-page h1 {
-    width: 93px;
-    height: 41px;
     position: absolute;
     color: #918F89;
     font-size: 30px;
     font-weight: normal;
     top: 191px;
     left: 228px;
+    width: 140px;
+    height: 41px;
 }
-
-/* 入荷情報 */
-
+/* 採用情報 */
 section {
-    margin: 160px 0 320px;
+    margin: 161px 0 320px;
 }
 section h2 {
     text-align: center;
     font-weight: normal;
     font-size: 23px;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
     letter-spacing: 2.3px;
+} 
+
+table {
+    width: 640px;
+    height: 624px;
+    margin: 0 auto;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    font-size: 16px;
+    border-collapse: collapse;
 }
-.arrival-list {
-    display: flex;
-    margin: 0 96px 32px;
+th {/* table　販売員　家具職人 */
+    background-color: rgba(178, 178, 178, 0.3);
+    border: 1px solid #707070;
+    font-weight: normal;
+    width: 148px;
+    vertical-align: middle;
 }
-.arrival-list li {
-    position: relative;
-    width: 320px;
-    height: 320px;
+td {/*『仕事内容・時給月給・勤務時間』の枠 */
+    border: 1px solid #707070;
 }
-.arrival-list li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /*黒の半透明のフィルターをかける*/
+.job-information {/*『仕事内容・時給月給・勤務時間』 */
+    padding: 16px 0 8px 48px;
 }
-.arrival-list p {
-    position: absolute;
-    color: #FFFFFF;
-    font-size: 17px;
-    text-shadow: 0px 0px 6px #000000E0;
-    letter-spacing: -0.85px;
+.job-description {/*『仕事内容・時給月給・勤務時間』の内容 */
+    font-size: 14px;
+    padding: 0 0 16px 48px;
 }
-/* アームストロングのカウチ入荷　*/
-.arrival-list li:first-of-type {/* 画像部分 */
-    background-image: url("../kaguya_images/news01/news01.png");
-    margin-right: 64px;
+.job-description p {
+    line-height: 21px;
+}
+.job-contents {/*『仕事内容』の中のリスト */
+    padding-left: 68px;
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+.job-contents li {
+    list-style-type: disc;
+    line-height: 23px;
 }
 
-.arrival-list li:first-of-type p {/* テキスト部分 */
-    top: 144.19px;
-    left: 47px;
-}
-
-/* アームストロングのチェア再入荷　*/
-.arrival-list li:nth-of-type(2) {/* 画像部分 */
-    background-image: url("../kaguya_images/news02/news02.png");
-    margin-right: 64px;
-}
-
-.arrival-list li:nth-of-type(2) p {/* テキスト部分 */
-    top: 143px;
-    left: 39.5px;
-}
-
-/* アームストロングのテーブル入荷　*/
-.arrival-list li:nth-of-type(3) {/* 画像部分 */
-    background-image: url("../kaguya_images/news03/news03.png");
-}
-
-.arrival-list li:nth-of-type(3) p {/* テキスト部分 */
-    top: 141px;
-    left: 41px;
-}
 /* footer */
-
 .footer-wrapper {
     height: 240px;
     margin-top: 320px;

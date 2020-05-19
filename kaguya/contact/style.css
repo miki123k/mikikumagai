@@ -30,7 +30,7 @@ footer,header,hgroup,menu,nav,section {
 nav ul {
     list-style:none;
 }
-li{
+li {
     list-style: none;
 }
 blockquote, q {
@@ -94,7 +94,7 @@ body {
     margin: 0 auto;
     background-color: #FCFCFC;
 }
-/* header */
+* header */
 header {
     height: 56px;
 }
@@ -124,93 +124,92 @@ header {
 }
 /* トップ画像 */
 .top-page {
-    background-image: url("../kaguya_images/news_top/news_top.png");
+    background-image: url("../kaguya_images/contact_top/contact_top.png");
     background-size: cover;
     height: 456px;
     width: 1280px;
     position: relative;
 }
 .top-page h1 {
-    width: 93px;
+    width: 151px;
     height: 41px;
     position: absolute;
-    color: #918F89;
+    color: #FCFCFC;
     font-size: 30px;
     font-weight: normal;
     top: 191px;
     left: 228px;
 }
-
-/* 入荷情報 */
-
-section {
-    margin: 160px 0 320px;
-}
-section h2 {
+/* お問い合わせ */
+h2 {
+    margin-bottom: 40px;
     text-align: center;
-    font-weight: normal;
-    font-size: 23px;
-    margin-bottom: 56px;
-    letter-spacing: 2.3px;
+    font: 24px normal; 
 }
-.arrival-list {
-    display: flex;
-    margin: 0 96px 32px;
+section p {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 72px;
 }
-.arrival-list li {
-    position: relative;
-    width: 320px;
-    height: 320px;
+section {
+    margin: 161px 0320px;
 }
-.arrival-list li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /*黒の半透明のフィルターをかける*/
+/* contact フォーム */
+form {
+    margin-bottom: 42px;
+    text-align: center;
 }
-.arrival-list p {
-    position: absolute;
-    color: #FFFFFF;
-    font-size: 17px;
-    text-shadow: 0px 0px 6px #000000E0;
-    letter-spacing: -0.85px;
+.contact-text {
+    width: 454px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    opacity: 0.6;
+    margin: 0 auto 24px;
+    display: block;
+    padding: 10px 16px;
 }
-/* アームストロングのカウチ入荷　*/
-.arrival-list li:first-of-type {/* 画像部分 */
-    background-image: url("../kaguya_images/news01/news01.png");
-    margin-right: 64px;
+.contact-text::placeholder {
+    letter-spacing: 0.6px;
+    color: #3B3B3B;
+    opacity: 0.4;
+    font-size: 12px;   
 }
-
-.arrival-list li:first-of-type p {/* テキスト部分 */
-    top: 144.19px;
-    left: 47px;
-}
-
-/* アームストロングのチェア再入荷　*/
-.arrival-list li:nth-of-type(2) {/* 画像部分 */
-    background-image: url("../kaguya_images/news02/news02.png");
-    margin-right: 64px;
+textarea { /* 問い合わせ内容 */
+    width: 454px;
+    height: 200px;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 16px;
+    opacity: 0.6;
+    letter-spacing: 0.6px;
+    color: rgba(3,3,3,0.4);
+    font-size: 12px;
+    padding: 10px 16px;
 }
 
-.arrival-list li:nth-of-type(2) p {/* テキスト部分 */
-    top: 143px;
-    left: 39.5px;
+textarea::placeholder {
+    letter-spacing: 0.6px;
+    color: #3B3B3B;
+    opacity: 0.4;
+    font-size: 12px;
+}
+.contact-submit { /* 送信ボタン */
+    width: 161px;
+    height: 32px;
+    background-color: #D1D1D1;
+    border-radius: 16px;
+    display: block;
+    margin: 40px auto 0;
+    letter-spacing: 1.4px;
+    color: #707070;
+    opacity: 1;
+    font-size: 14px;
 }
 
-/* アームストロングのテーブル入荷　*/
-.arrival-list li:nth-of-type(3) {/* 画像部分 */
-    background-image: url("../kaguya_images/news03/news03.png");
-}
 
-.arrival-list li:nth-of-type(3) p {/* テキスト部分 */
-    top: 141px;
-    left: 41px;
-}
 /* footer */
-
 .footer-wrapper {
     height: 240px;
     margin-top: 320px;

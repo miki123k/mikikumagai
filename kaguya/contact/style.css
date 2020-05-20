@@ -84,6 +84,7 @@ hr {
 }
 
 /* リセットCSSここまで */
+
 * {
     box-sizing: border-box;
 }
@@ -94,7 +95,7 @@ body {
     margin: 0 auto;
     background-color: #FCFCFC;
 }
-* header */
+/* header */
 header {
     height: 56px;
 }

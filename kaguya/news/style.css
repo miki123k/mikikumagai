@@ -1,0 +1,253 @@
+@charset "utf-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {
+    line-height:1;
+    color: #333;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+li{
+    list-style: none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+/* リセットCSSここまで */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Noto Sans", sans-serif;
+    color: #3B3B3B;
+    width: 1280px;
+    margin: 0 auto;
+    background-color: #FCFCFC;
+}
+/* header */
+header {
+    height: 56px;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.header-logo {
+    margin-top: 16px;
+    margin-left: 96px;
+    width: 38px;
+    height: 24px;
+}
+.header-nav {
+    display: flex;
+    margin: 26px 96px 8px 652.51px;
+}
+.header-nav li {
+    margin-right: 56px;
+}
+
+.header-nav li:last-of-type {
+    margin-right: 0;
+}
+.header-nav a {
+    color: #B2B2B2;
+}
+/* トップ画像 */
+.top-page {
+    background-image: url("../kaguya_images/news_top/news_top.png");
+    background-size: cover;
+    height: 456px;
+    width: 1280px;
+    position: relative;
+}
+.top-page h1 {
+    width: 93px;
+    height: 41px;
+    position: absolute;
+    color: #918F89;
+    font-size: 30px;
+    font-weight: normal;
+    top: 191px;
+    left: 228px;
+}
+
+/* 入荷情報 */
+
+section {
+    margin: 160px 0 320px;
+}
+section h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 23px;
+    margin-bottom: 56px;
+    letter-spacing: 2.3px;
+}
+.arrival-list {
+    display: flex;
+    margin: 0 96px 32px;
+}
+.arrival-list li {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+.arrival-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /*黒の半透明のフィルターをかける*/
+}
+.arrival-list p {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 17px;
+    text-shadow: 0px 0px 6px #000000E0;
+    letter-spacing: -0.85px;
+}
+/* アームストロングのカウチ入荷　*/
+.arrival-list li:first-of-type {/* 画像部分 */
+    background-image: url("../kaguya_images/news01/news01.png");
+    margin-right: 64px;
+}
+
+.arrival-list li:first-of-type p {/* テキスト部分 */
+    top: 144.19px;
+    left: 47px;
+}
+
+/* アームストロングのチェア再入荷　*/
+.arrival-list li:nth-of-type(2) {/* 画像部分 */
+    background-image: url("../kaguya_images/news02/news02.png");
+    margin-right: 64px;
+}
+
+.arrival-list li:nth-of-type(2) p {/* テキスト部分 */
+    top: 143px;
+    left: 39.5px;
+}
+
+/* アームストロングのテーブル入荷　*/
+.arrival-list li:nth-of-type(3) {/* 画像部分 */
+    background-image: url("../kaguya_images/news03/news03.png");
+}
+
+.arrival-list li:nth-of-type(3) p {/* テキスト部分 */
+    top: 141px;
+    left: 41px;
+}
+/* footer */
+
+.footer-wrapper {
+    height: 240px;
+    margin-top: 320px;
+    background-color: #918F89;
+    color: #FFFFFF;
+}
+.footer-item {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav {
+    display: flex;
+    margin-top: 120px;
+}
+.footer-logo {
+    width: 64px;
+    height: 40px;
+    margin-left: 240px;
+    margin-top: 120px;
+}
+.footer-nav li {
+    margin-right: 32px;
+    font-size: 18px;
+    height: 24px;
+}
+.footer-nav li:first-of-type {
+    margin-left: 17px;
+}
+.footer-nav li:last-of-type {
+    margin-right: 192px;
+}
+.footer-nav a {
+    color: #FFFFFF;
+}
+.footer-wrapper small {
+    font-size: 11px;
+    margin: 41px auto 24px;
+    display: block;
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta name="description"
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <title>HTMLCSS</title>
 </head>
+
 <body>
     <header>
         <div class="header-wrapper">
@@ -23,12 +25,15 @@
     </header>
     <main>
         <!-- top画像・タイトル　CSSで背景画像挿入する -->
-        <h1>CONTACT</h1>
+        <div class="top-page">
+            <h1>CONTACT</h1>
+        </div>
         <section>
             <h2>お問い合わせ</h2>
+            <p>オーダー家具や在庫状況のお問い合わせは下記フォームから承っております。</p>
             <form>
-                <input type="text" name="yourname" placeholder="お名前">
-                <input type="text" name="address" placeholder="メールアドレス">
+                <input class="contact-text" type="text" name="yourname" placeholder="お名前">
+                <input class="contact-text" type="text" name="address" placeholder="メールアドレス">
                 <textarea placeholder="お問い合わせ内容"></textarea>
                 <input class="contact-submit" type="submit" value="SEND">
             </form>
@@ -36,13 +41,15 @@
     </main>
     <footer>
         <div class="footer-wrapper">
-            <img src="../kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
-            <ul class="footer-nav">
-                <li><a href="../kaguya.html">HOME</a></li>
-                <li><a href="../news/index.html">NEWS</a></li>
-                <li><a href="../recruit/index.html">RECRUIT</a></li>
-                <li>CONTACT</li>
-            </ul>
+            <div class="footer-item">
+                <img class="footer-logo" src="../kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
+                <ul class="footer-nav">
+                    <li><a href="../kaguya.html">HOME</a></li>
+                    <li><a href="../news/index.html">NEWS</a></li>
+                    <li><a href="../recruit/index.html">RECRUIT</a></li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
             <small>©HTMLCSS.code</small>
         </div>
     </footer>

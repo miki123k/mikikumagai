@@ -14,8 +14,11 @@
     <!-- ヘッダー -->
     <header>
         <div class="header-wrapper">
-            <div class="header-logo">
-                <img src="kaguya_images/logo_header/logo_header.png" alt="ロゴ">
+            <div class="header-logo-pc">
+                <img src="kaguya_images/logo_header/logo_header.png" alt="PC画面用ロゴ">
+            </div>
+            <div class="header-logo-sp">
+                <img src="kaguya_images/logo_footer02/logo_footer.png" alt="スマホ画面用ロゴ">
             </div>
             <ul class="header-nav">
                 <li>HOME</li>
@@ -29,17 +32,20 @@
     <main>
         <!-- top画像・タイトル　CSSで背景画像挿入する -->
         <div class="top-page">
-            <h1>We propose a life.</h1>
+            <h1><span class="h-text">We<br class="text"></span>
+                <span class="h-text">propose<br class="text"></span>
+                <span class="h-text">a life.</span>
+            </h1>
         </div>
         <section>
             <div class="first-section-image"></div>
             <div class="about-brand">
                 <h2>暮らしを提案する。</h2>
-                <p>私たちは、家具を売るのではなく、お客様の理想とする <br>
+                <p>私たちは、家具を売るのではなく、<br class="text">お客様の理想とする <br><!-- 参考にしたサイトhttps://wemo.tech/1224-->
                     「暮らし」を提案します。<br>
                     仕事で疲れた後に帰りたくなる、<br>
                     今日も１日頑張ろうと思える、<br>
-                    そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。</p>
+                    そんな空間をお客様と一緒に作り上げていくのが<br class="text">私たちの仕事です。</p>
             </div>
         </section>
         <!--  NEWS  -->
@@ -50,7 +56,7 @@
                     <p>アームストロングのカウチ入荷</p>
                 </li>
                 <li>
-                    <p>アームストロングのチェア再入荷</p>
+                    <p>アームストロングのチェア<span class="news-text">再</span>入荷</p>
                 </li>
                 <li>
                     <p>アームストロングのテーブル入荷</p>
@@ -76,7 +82,8 @@
                 <input class="contact-text" type="text" name="yourname" placeholder="お名前">
                 <input class="contact-text" type="text" name="address" placeholder="メールアドレス">
                 <textarea placeholder="お問い合わせ内容"></textarea>
-                <input class="contact-submit" type="submit" value="SEND">
+                <input class="contact-submit-pc" type="submit" value="SEND">
+                <input class="contact-submit-sp" type="submit" value="Send">
             </form>
         </section>
         <!--  RECRUIT  -->
@@ -101,7 +108,7 @@
                     <li><a href="contact/index.html">CONTACT</a></li>
                 </ul>
             </div>
-            <small>©HTMLCSS.code</small>
+            <small>&copy;HTMLCSS.code</small>
         </div>
     </footer>
 </body>

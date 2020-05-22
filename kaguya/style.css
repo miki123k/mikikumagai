@@ -655,11 +655,14 @@ textarea::placeholder {
     display: flex;
     margin-top: 120px;
 }
-.footer-logo {
+.footer-logo{
     width: 64px;
     height: 40px;
     margin-left: 240px;
     margin-top: 120px;
+}
+.footer-logo-sp {
+    display: none;
 }
 .footer-nav li {
     margin-right: 32px;
@@ -683,13 +686,25 @@ textarea::placeholder {
 }
 /* footerのレスポンシブ */
 @media (max-width: 375px) {
+    .footer-wrapper {
+        height: 232px;
+    }
     .footer-nav {
         display: none;
     }
     .footer-logo {
+        display: none;
+    }
+    .footer-logo-sp {
+        display: block;
+        width: 52px;
+        height: 32px;
         margin: 72px 162px 82px;
     }
     .footer-wrapper small {
         margin: 0 147px 32px;
+    }
+    .footer-wrapper small {
+        font-size: 10px;
     }
 }

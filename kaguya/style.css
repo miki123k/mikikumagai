@@ -178,7 +178,7 @@ header {
         background-image: url("kaguya_images/home_top_sp/home_top_sp.png");
         width: 375px;
         height: 744px;
-        object-fit: cover;
+        background-size: 100% 100%;
     }
     .top-page h1 {
         background-color: transparent;

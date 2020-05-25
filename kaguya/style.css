@@ -640,10 +640,18 @@ textarea::placeholder {
     }
     .recruitcomment p {
         letter-spacing: 0;
+        text-align: center;
+    }
+    .recruit-wrapper p {
+        margin: initial;
     }
     /* recruitのview more */
-    .recruit-wrapper p {
+    .recruit-viewmore {
         margin-top: 24px;
+        padding-left: 132px;
+    }
+    .recruit-viewmore p {
+        text-align: initial;
     }
     .recruit-wrapper a {
         opacity: 1;

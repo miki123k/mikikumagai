@@ -131,10 +131,11 @@ header {
 /* headerのレスポンシブ */
 
 @media (max-width: 375px) {
-    header {
+    .header-wrapper {
         background-color: #918F89;
         position: fixed;
-        z-index: 10;
+        z-index: 100;
+        top: 0;
     }
     .header-nav {
         display: none;
@@ -153,6 +154,7 @@ header {
     display: none;
 }
 /* トップ画像 */
+
 .top-page {
     background-image: url("kaguya_images/home_top/home_top.png");
     background-size: cover;
@@ -176,10 +178,15 @@ header {
 
 /* トップ画像のレスポンシブ */
 @media (max-width:375px) {
+    main {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     .top-page {
         background-image: url("kaguya_images/home_top_sp/home_top_sp.png");
         width: 375px;
-        height: 744px;
+        height: 800px;
         background-size: 100% 100%;
     }
     .top-page h1 {
@@ -238,6 +245,9 @@ section:first-of-type {
 
 /* 暮らしを提案する のレスポンシブ */
 @media (max-width: 375px) {
+    section {
+        width: 375px;
+    }
     section:first-of-type {
         margin-top: 88px;
         flex-direction: column-reverse;
@@ -706,8 +716,13 @@ textarea::placeholder {
 }
 /* footerのレスポンシブ */
 @media (max-width: 375px) {
+    footer {
+        position: absolute;
+        top: 4448px;
+    }
     .footer-wrapper {
-        height: 232px;
+        height: 240px;
+        margin-top: 0;
     }
     .footer-nav {
         display: none;
@@ -723,8 +738,6 @@ textarea::placeholder {
     }
     .footer-wrapper small {
         margin: 0 147px 32px;
-    }
-    .footer-wrapper small {
         font-size: 10px;
     }
 }

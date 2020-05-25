@@ -182,9 +182,9 @@ header {
     }
     .top-page h1 {
         background-color: transparent;
-        width: auto;
-        height: auto;
-        font-size: 39px;
+        width: 0;
+        height: 0;
+        font: 39px Noto Sans;
         padding: 0;
         top: 200px;
     }
@@ -192,9 +192,8 @@ header {
         display: block;
         background-color: rgba(255, 255, 255, 0.6);
         padding: 16px 16px 16px 54px;
-        line-height: 48px;
-        text-align: center;
         height: 80px;
+        letter-spacing: 1.95px;
     }
     .h-text:first-of-type {
         width: 136px;
@@ -400,12 +399,20 @@ section:first-of-type {
         top: 122px;
         left: 36.5px;
     }
+    .news-list li p {
+        text-align: center;
+    }
     /*　newsのview more */
     .news-wrapper p {
         margin-top: 32px;
+        text-align: initial;
+    }
+    .viewmore-p {
+        padding-left: 132px;
     }
     .news-wrapper a {
         opacity: 1;
+        letter-spacing: 0.9px;
     }
 }
 
@@ -541,6 +548,9 @@ textarea::placeholder {
     }
     .contact-wrapper h3 {
         margin-bottom: 32px;
+        width: 129px;
+        height: 32px;
+        margin-left: 127px;
     }
     .contact-text {
         width: 286px;

@@ -133,6 +133,8 @@ header {
 @media (max-width: 375px) {
     header {
         background-color: #918F89;
+        position: fixed;
+        z-index: 10;
     }
     .header-nav {
         display: none;

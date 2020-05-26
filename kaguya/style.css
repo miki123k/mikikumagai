@@ -90,7 +90,8 @@ hr {
 body {
     font-family: "Noto Sans", sans-serif;
     color: #3B3B3B;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     background-color: #FCFCFC;
 }
@@ -103,11 +104,14 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.header-logo {
+.header-logo-pc {
     margin-top: 16px;
     margin-left: 96px;
     width: 38px;
     height: 24px;
+}
+.header-logo-sp {/*　スマホ画面用ロゴ非表示　*/
+    display: none;
 }
 .header-nav {
     display: flex;
@@ -123,7 +127,34 @@ header {
 .header-nav a {
     color: #B2B2B2;
 }
+
+/* headerのレスポンシブ */
+
+@media (max-width: 375px) {
+    .header-wrapper {
+        background-color: #918F89;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-logo-sp {
+        display: block;
+        width: 40px;
+        height: 24px;
+        margin: 16px 168px;
+    }
+    .header-logo-pc {/* PC画面用ロゴ非表示 */
+        display: none;
+    }
+}
+.text {/* レスポンシブでの改行を非表示 */
+    display: none;
+}
 /* トップ画像 */
+
 .top-page {
     background-image: url("kaguya_images/home_top/home_top.png");
     background-size: cover;
@@ -144,6 +175,48 @@ header {
     padding: 32px 32px 32px 88px;
     line-height: 73px;
 }
+
+/* トップ画像のレスポンシブ */
+@media (max-width:375px) {
+    main {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .top-page {
+        background-image: url("kaguya_images/home_top_sp/home_top_sp.png");
+        width: 375px;
+        height: 800px;
+        background-size: 100% 100%;
+    }
+    .top-page h1 {
+        background-color: transparent;
+        width: 0;
+        height: 0;
+        font: 39px Noto Sans;
+        padding: 0;
+        top: 200px;
+    }
+    .h-text {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 16px 16px 16px 54px;
+        height: 80px;
+        letter-spacing: 1.95px;
+    }
+    .h-text:first-of-type {
+        width: 136px;
+    }
+    .h-text:nth-child(2) {
+        margin: 16px 0;
+        width: 240px;
+    }
+    .h-text:nth-child(3) {
+        width: 186px;
+    }
+    
+}
+
 
 /* 暮らしを提案する */
 section:first-of-type {
@@ -167,7 +240,37 @@ section:first-of-type {
     margin-left: 56px;
     font-size: 12px;
     letter-spacing: 0.36px;
-    line-height: 30px;
+    line-height: 35px;
+}
+
+/* 暮らしを提案する のレスポンシブ */
+@media (max-width: 375px) {
+    section {
+        width: 375px;
+    }
+    section:first-of-type {
+        margin-top: 88px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .first-section-image {
+        background-image: url("kaguya_images/concept2/concept.png");
+        width: 328px;
+        height: 264px;
+        margin: 24px 23px 0 24px;
+    }
+    .about-brand h2 {
+        margin: 0 auto 32px;
+        font-size: 21px;
+    }
+    .about-brand p {
+        margin: auto;
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
+    .text {
+        display: inline-block;
+    }
 }
 
 /* news */
@@ -189,6 +292,9 @@ section:first-of-type {
     position: relative;
     width: 320px;
     height: 320px;
+}
+.news-list li p {
+    margin-top: 0;
 }
 .news-list li::before {
     content: '';
@@ -256,6 +362,73 @@ section:first-of-type {
     top: 5px;
     font-size: 10px;
 }
+
+/* newsのレスポンシブ */
+@media (max-width: 375px) {
+    .news-wrapper h3 {
+        margin: auto;
+        font-size: 25px;
+    }
+    .news-list {
+        flex-direction: column;
+        margin: 0 51.5px;
+    }
+    .news-list li {
+        margin-top: 24px;
+        width: 272px;
+        height: 272px;
+    }
+    .news-list p {
+        font-size: 15px;
+        letter-spacing: -0.75px;
+    }
+    /* news　アームストロングのカウチ入荷　*/
+    .news-list li:first-of-type {/* 画像部分 */
+        background-image: url("kaguya_images/news01_2/AdobeStock_59829158.png");
+    }
+    .news-list li:first-of-type p {/* テキスト部分 */
+        top: 122px;
+        left: 36.5px;
+    }
+    /* news　アームストロングのチェア再入荷　*/
+    .news-list li:nth-of-type(2) {/* 画像部分 */
+        background-image: url("kaguya_images/news02_2/news02.png");
+    }
+    .news-list li:nth-of-type(2) p {/* テキスト部分 */
+        top: 122px;
+        left: 36.5px;
+    }
+    .news-text {
+        display: none;
+    }
+    
+
+    /* news　アームストロングのテーブル入荷　*/
+    .news-list li:nth-of-type(3) {/* 画像部分 */
+        background-image: url("kaguya_images/news03_2/news03.png");
+    }
+    .news-list li:nth-of-type(3) p {/* テキスト部分 */
+        top: 122px;
+        left: 36.5px;
+    }
+    .news-list li p {
+        text-align: center;
+    }
+    /*　newsのview more */
+    .news-wrapper p {
+        margin-top: 32px;
+        text-align: initial;
+    }
+    .viewmore-p {
+        padding-left: 132px;
+    }
+    .news-wrapper a {
+        opacity: 1;
+        letter-spacing: 0.9px;
+    }
+}
+
+
 /* 公式カタログ */
 .catalog-wrapper {
     margin-top: 240px;
@@ -290,7 +463,23 @@ section:first-of-type {
     letter-spacing: 1.8px;
     line-height: 53px;
 }
-
+/* 公式カタログのレスポンシブ */
+@media (max-width: 375px) {
+    .catalog-comment {
+        margin: 48px 23px 40px 24px;
+    }
+    .catalog-wrapper p {
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
+    .catalog-btn {
+        width: 280px;
+        height: 56px;
+    }
+    .catalog-btn p {
+        font-size: 18px;
+    }
+}
 
 
 /* CONTACT */
@@ -345,7 +534,7 @@ textarea::placeholder {
     opacity: 0.4;
     font-size: 12px;
 }
-.contact-submit { /* 送信ボタン */
+.contact-submit-pc { /* 送信ボタン */
     width: 161px;
     height: 32px;
     background-color: #D1D1D1;
@@ -356,6 +545,58 @@ textarea::placeholder {
     color: #707070;
     opacity: 1;
     font-size: 14px;
+}
+.contact-submit-sp {
+    display: none;
+}
+
+/* CONTACTのレスポンシブ */
+@media (max-width: 375px) {
+    form {
+        margin: 0;
+    }
+    .contact-wrapper{
+        margin-top: 240px;
+    }
+    .contact-wrapper h3 {
+        margin-bottom: 32px;
+        width: 129px;
+        height: 32px;
+        margin-left: 127px;
+    }
+    .contact-text {
+        width: 286px;
+        height: 32px;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .contact-text::placeholder {
+        font-size: 14px;
+    }
+    textarea {
+        width: 286px;
+        height: 160px;
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+    textarea::placeholder {
+        font-size: 14px;
+    }
+    .contact-submit-pc {
+        display: none;
+    }
+    .contact-submit-sp {
+        margin: 0 101px;
+        width: 173px;
+        height: 48px;
+        background-color: #D1D1D1;
+        border-radius: 30px;
+        display: block;
+        letter-spacing: 1.4px;
+        color: #707070;
+        opacity: 1;
+        font: 18px Noto Sans;
+    }
 }
 
 /* RECRUIT */
@@ -398,6 +639,36 @@ textarea::placeholder {
     top: 5px;
     font-size: 8px;
 }
+/* RECRUITのレスポンシブ */
+@media (max-width: 375px) {
+    .recruit-wrapper {
+        margin-top: 240px;
+    }
+    .recruit-wrapper h3 {
+        margin-bottom: 32px;
+    }
+    .recruitcomment {
+        margin: 0 56.5px;
+    }
+    .recruitcomment p {
+        letter-spacing: 0;
+        text-align: center;
+    }
+    .recruit-wrapper p {
+        margin: initial;
+    }
+    /* recruitのview more */
+    .recruit-viewmore {
+        margin-top: 24px;
+        padding-left: 132px;
+    }
+    .recruit-viewmore p {
+        text-align: initial;
+    }
+    .recruit-wrapper a {
+        opacity: 1;
+    }
+}
 
 /* footer */
 .footer-wrapper {
@@ -414,11 +685,14 @@ textarea::placeholder {
     display: flex;
     margin-top: 120px;
 }
-.footer-logo {
+.footer-logo{
     width: 64px;
     height: 40px;
     margin-left: 240px;
     margin-top: 120px;
+}
+.footer-logo-sp {
+    display: none;
 }
 .footer-nav li {
     margin-right: 32px;
@@ -439,4 +713,31 @@ textarea::placeholder {
     margin: 41px auto 24px;
     display: block;
     text-align: center;
+}
+/* footerのレスポンシブ */
+@media (max-width: 375px) {
+    footer {
+        position: absolute;
+        top: 4448px;
+    }
+    .footer-wrapper {
+        height: 240px;
+        margin-top: 0;
+    }
+    .footer-nav {
+        display: none;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .footer-logo-sp {
+        display: block;
+        width: 52px;
+        height: 32px;
+        margin: 72px 162px 82px;
+    }
+    .footer-wrapper small {
+        margin: 0 147px 32px;
+        font-size: 10px;
+    }
 }

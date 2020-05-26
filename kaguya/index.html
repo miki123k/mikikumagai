@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description"
         content="We propose a life.私たちは、家具を売るのではなく、お客様の理想とする 「暮らし」を提案します。 仕事で疲れた後に帰りたくなる、 今日も１日頑張ろうと思える、 そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。">
     <link rel="stylesheet" href="style.css">
@@ -13,8 +14,11 @@
     <!-- ヘッダー -->
     <header>
         <div class="header-wrapper">
-            <div class="header-logo">
-                <img src="kaguya_images/logo_header/logo_header.png" alt="ロゴ">
+            <div class="header-logo-pc">
+                <img src="kaguya_images/logo_header/logo_header.png" alt="PC画面用ロゴ">
+            </div>
+            <div class="header-logo-sp">
+                <img src="kaguya_images/logo_footer02/logo_footer.png" alt="スマホ画面用ロゴ">
             </div>
             <ul class="header-nav">
                 <li>HOME</li>
@@ -28,17 +32,20 @@
     <main>
         <!-- top画像・タイトル　CSSで背景画像挿入する -->
         <div class="top-page">
-            <h1>We propose a life.</h1>
+            <h1><span class="h-text">We<br class="text"></span>
+                <span class="h-text">propose<br class="text"></span>
+                <span class="h-text">a life.</span>
+            </h1>
         </div>
         <section>
             <div class="first-section-image"></div>
             <div class="about-brand">
                 <h2>暮らしを提案する。</h2>
-                <p>私たちは、家具を売るのではなく、お客様の理想とする <br>
+                <p>私たちは、家具を売るのではなく、<br class="text">お客様の理想とする <br><!-- 参考にしたサイトhttps://wemo.tech/1224-->
                     「暮らし」を提案します。<br>
                     仕事で疲れた後に帰りたくなる、<br>
                     今日も１日頑張ろうと思える、<br>
-                    そんな空間をお客様と一緒に作り上げていくのが私たちの仕事です。</p>
+                    そんな空間をお客様と一緒に作り上げていくのが<br class="text">私たちの仕事です。</p>
             </div>
         </section>
         <!--  NEWS  -->
@@ -49,13 +56,13 @@
                     <p>アームストロングのカウチ入荷</p>
                 </li>
                 <li>
-                    <p>アームストロングのチェア再入荷</p>
+                    <p>アームストロングのチェア<span class="news-text">再</span>入荷</p>
                 </li>
                 <li>
                     <p>アームストロングのテーブル入荷</p>
                 </li>
             </ul>
-            <p><a href="news/index.html">view more</a></p>
+            <p class="viewmore-p"><a href="news/index.html">view more</a></p>
         </section>
         <!--  公式カタログ  -->
         <section class="catalog-wrapper">
@@ -75,7 +82,8 @@
                 <input class="contact-text" type="text" name="yourname" placeholder="お名前">
                 <input class="contact-text" type="text" name="address" placeholder="メールアドレス">
                 <textarea placeholder="お問い合わせ内容"></textarea>
-                <input class="contact-submit" type="submit" value="SEND">
+                <input class="contact-submit-pc" type="submit" value="SEND">
+                <input class="contact-submit-sp" type="submit" value="Send">
             </form>
         </section>
         <!--  RECRUIT  -->
@@ -85,14 +93,17 @@
                 <p>現在Staffを募集しております。 <br>
                     詳しくは詳細ページをご覧ください。</p>
             </div>
-            <p><a href="recruit/index.html">view more</a></p>
+            <div class="recruit-viewmore">
+                <p><a href="recruit/index.html">view more</a></p>
+            </div>
         </section>
     </main>
     <!--  フッター  -->
     <footer>
         <div class="footer-wrapper">
             <div class="footer-item">
-                <img class="footer-logo" src="kaguya_images/logo_footer/logo_footer.png" alt="ロゴ">
+                <img class="footer-logo" src="kaguya_images/logo_footer/logo_footer.png" alt="PC画面用ロゴ">
+                <img class="footer-logo-sp" src="kaguya_images/logo_footer02/logo_footer.png" alt="スマホ画面用ロゴ">
                 <ul class="footer-nav">
                     <li>HOME</li>
                     <li><a href="news/index.html">NEWS</a></li>
@@ -100,7 +111,7 @@
                     <li><a href="contact/index.html">CONTACT</a></li>
                 </ul>
             </div>
-            <small>©HTMLCSS.code</small>
+            <small>&copy;HTMLCSS.code</small>
         </div>
     </footer>
 </body>

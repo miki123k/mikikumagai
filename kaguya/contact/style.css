@@ -103,11 +103,14 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.header-logo {
+.header-logo-pc {
     margin-top: 16px;
     margin-left: 96px;
     width: 38px;
     height: 24px;
+}
+.header-logo-sp {/* スマホ用ロゴ非表示 */
+    display: none;
 }
 .header-nav {
     display: flex;
@@ -123,6 +126,30 @@ header {
 .header-nav a {
     color: #B2B2B2;
 }
+/* headerのレスポンシブ */
+@media (max-width:375px) {
+    header {
+        position: fixed;
+        z-index: 100;
+    }
+    .header-wrapper {
+        background-color: #918F89;
+        top: 0;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-logo-sp {
+        display: block;
+        width: 40px;
+        height: 24px;
+        margin: 16px 168px;
+    }
+    .header-logo-pc {/* PC画面用ロゴ非表示 */
+        display: none;
+    }
+}
+
 /* トップ画像 */
 .top-page {
     background-image: url("../kaguya_images/contact_top/contact_top.png");
@@ -141,12 +168,36 @@ header {
     top: 191px;
     left: 228px;
 }
+/* トップ画像のレスポンシブ */
+@media(max-width:375px) {
+    .top-page {
+        background-image: url("../kaguya_images/contact_top_sp/contact_top_sp.png");
+        background-size: 100% 100%;
+        width: 375px;
+        height: 704px;
+        position: absolute;
+        top: 0;
+    }
+    .top-page h1 {
+        left: 119px;
+        top: 256px;
+        font-size: 25px;
+        letter-spacing: 2.5px;
+        width: 137px;
+        height: 32px;
+        
+    }
+}
 /* お問い合わせ */
-h2 {
+.heading-pc {
     margin-bottom: 40px;
     text-align: center;
     font: 24px normal; 
 }
+.heading-sp {
+    display: none;
+}
+
 section p {
     font-size: 15px;
     text-align: center;
@@ -154,6 +205,29 @@ section p {
 }
 section {
     margin: 161px 0320px;
+}
+/* CONTACT レスポンシブ */
+@media (max-width: 375px) {
+    section {
+        position: absolute;
+        top: 704px;
+        margin: 160px 0 0 0;
+    }
+    .heading-sp {
+        display: block;
+        margin-left: 127px;
+        font-size: 25px;
+        width: 129px;
+        height: 32px;
+        font-weight: normal;
+        letter-spacing: 2.5px;
+    }
+    .heading-pc {
+        display: none;
+    }
+    section p {
+        display: none;
+    }
 }
 /* contact フォーム */
 form {
@@ -196,7 +270,7 @@ textarea::placeholder {
     opacity: 0.4;
     font-size: 12px;
 }
-.contact-submit { /* 送信ボタン */
+.contact-submit-pc { /* 送信ボタン */
     width: 161px;
     height: 32px;
     background-color: #D1D1D1;
@@ -207,6 +281,58 @@ textarea::placeholder {
     color: #707070;
     opacity: 1;
     font-size: 14px;
+}
+.contact-submit-sp {
+    display: none;
+}
+
+/* contact フォームのレスポンシブ */
+@media (max-width: 375px) {
+    form {
+        margin: 0;
+    }
+    section {
+        margin-top: 240px;
+    }
+    section h2 {
+        margin-bottom: 32px;
+        width: 129px;
+        height: 32px;
+        margin-left: 127px;
+    }
+    .contact-text {
+        width: 286px;
+        height: 32px;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .contact-text::placeholder {
+        font-size: 14px;
+    }
+    textarea {
+        width: 286px;
+        height: 160px;
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+    textarea::placeholder {
+        font-size: 14px;
+    }
+    .contact-submit-pc {
+        display: none;
+    }
+    .contact-submit-sp {
+        margin: 0 101px;
+        width: 173px;
+        height: 48px;
+        background-color: #D1D1D1;
+        border-radius: 30px;
+        display: block;
+        letter-spacing: 1.4px;
+        color: #707070;
+        opacity: 1;
+        font: 18px Noto Sans;
+    }
 }
 
 
@@ -250,4 +376,35 @@ textarea::placeholder {
     margin: 41px auto 24px;
     display: block;
     text-align: center;
+}
+.footer-logo-sp {/* スマホ用ロゴ非表示 */
+    display: none;
+}
+/* footerのレスポンシブ */
+@media (max-width:375px) {
+    footer {
+        position: absolute;
+        top: 1346px;
+        padding-bottom: 56px;
+    }
+    .footer-wrapper {
+        height: 240px;
+        margin-top: 240px;
+    }
+    .footer-nav {
+        display: none;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .footer-logo-sp {
+        display: block;
+        width: 52px;
+        height: 32px;
+        margin: 72px 162px 82px;
+    }
+    .footer-wrapper small {
+        margin: 0 147px 32px;
+        font-size: 10px;
+    }
 }

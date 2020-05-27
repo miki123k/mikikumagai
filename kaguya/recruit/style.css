@@ -253,7 +253,7 @@ td {/*『仕事内容・時給月給・勤務時間』の枠 */
     table {
         width: 344px;
         height: 624px;
-        margin-left: 16px;
+        margin: 0 16px 0 16px;
     }
     th {/* table　販売員　家具職人 */
         width: 72px;

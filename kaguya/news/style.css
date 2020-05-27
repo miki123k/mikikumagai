@@ -131,7 +131,7 @@ header {
 }
 
 /* headerのレスポンシブ */
-@media (max-width:375px) {
+@media (max-width: 375px) {
     header {
         position: fixed;
         z-index: 100;
@@ -176,7 +176,7 @@ header {
     left: 228px;
 }
 /* トップ画像のレスポンシブ */
-@media(max-width:375px) {
+@media(max-width: 375px) {
     .top-page {
         background-image: url("../kaguya_images/news_top_sp/news_top_sp.png");
         background-size: 100% 100%;
@@ -270,6 +270,7 @@ section h2 {
     section {
         position: absolute;
         top: 704px;
+        width: 375px;
     }
     section h2 {
         margin-left: 138px;

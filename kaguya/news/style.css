@@ -94,6 +94,7 @@ body {
     margin: 0 auto;
     background-color: #FCFCFC;
 }
+
 /* header */
 header {
     height: 56px;
@@ -102,11 +103,14 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.header-logo {
+.header-logo-pc {
     margin-top: 16px;
     margin-left: 96px;
     width: 38px;
     height: 24px;
+}
+.header-logo-sp {/* スマホ用ロゴ非表示 */
+    display: none;
 }
 .header-nav {
     display: flex;
@@ -122,6 +126,37 @@ header {
 .header-nav a {
     color: #B2B2B2;
 }
+.text {/* レスポンシブでの改行を非表示 */
+    display: none;
+}
+
+/* headerのレスポンシブ */
+@media (max-width: 375px) {
+    header {
+        position: fixed;
+        z-index: 100;
+    }
+    .header-wrapper {
+        background-color: #918F89;
+        top: 0;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header-logo-sp {
+        display: block;
+        width: 40px;
+        height: 24px;
+        margin: 16px 168px;
+    }
+    .header-logo-pc {/* PC画面用ロゴ非表示 */
+        display: none;
+    }
+}
+
+
+
+
 /* トップ画像 */
 .top-page {
     background-image: url("../kaguya_images/news_top/news_top.png");
@@ -139,6 +174,26 @@ header {
     font-weight: normal;
     top: 191px;
     left: 228px;
+}
+/* トップ画像のレスポンシブ */
+@media(max-width: 375px) {
+    .top-page {
+        background-image: url("../kaguya_images/news_top_sp/news_top_sp.png");
+        background-size: 100% 100%;
+        width: 375px;
+        height: 704px;
+        position: absolute;
+        top: 0;
+    }
+    .top-page h1 {
+        left: 149px;
+        top: 256px;
+        color: #3B3B3B;
+        font-size: 25px;
+        letter-spacing: 2.5px;
+        width: 84px;
+        height: 32px;
+    }
 }
 
 /* 入荷情報 */
@@ -209,6 +264,80 @@ section h2 {
     top: 141px;
     left: 41px;
 }
+
+/* 入荷情報のレスポンシブ */
+@media (max-width: 375px) {
+    section {
+        position: absolute;
+        top: 704px;
+        width: 375px;
+    }
+    section h2 {
+        margin-left: 138px;
+        font-size: 22px;
+        width: 99px;
+        height: 24px;
+    }
+    .arrival-list {
+        flex-direction: column;
+        margin: 0 51.5px;
+    }
+    .arrival-list li {
+        margin-top: 24px;
+        width: 272px;
+        height: 272px;
+    }
+    .arrival-list p {
+        font-size: 15px;
+        letter-spacing: -0.75px;
+    }
+    /* news　アームストロングのカウチ入荷　*/
+    .arrival-list li:first-of-type {/* 画像部分 */
+        background-image: url("../kaguya_images/news01_2/AdobeStock_59829158.png");
+    }
+    .arrival-list li:first-of-type p {/* テキスト部分 */
+        top: 122px;
+        left: 36.5px;
+    }
+    /* news　アームストロングのチェア再入荷　*/
+    .arrival-list li:nth-of-type(2) {/* 画像部分 */
+        background-image: url("../kaguya_images/news02_2/news02.png");
+    }
+    .arrival-list li:nth-of-type(2) p {/* テキスト部分 */
+        top: 122px;
+        left: 36.5px;
+    }
+    .news-text {
+        display: none;
+    }
+    
+
+    /* news　アームストロングのテーブル入荷　*/
+    .arrival-list li:nth-of-type(3) {/* 画像部分 */
+        background-image: url("../kaguya_images/news03_2/news03.png");
+    }
+    .arrival-list li:nth-of-type(3) p {/* テキスト部分 */
+        top: 122px;
+        left: 36.5px;
+    }
+    .arrival-list li p {
+        text-align: center;
+    }
+    /*　newsのview more */
+    .news-wrapper p {
+        margin-top: 32px;
+        text-align: initial;
+    }
+    .viewmore-p {
+        padding-left: 132px;
+    }
+    .news-wrapper a {
+        opacity: 1;
+        letter-spacing: 0.9px;
+    }
+}
+
+
 /* footer */
 
 .footer-wrapper {
@@ -250,4 +379,35 @@ section h2 {
     margin: 41px auto 24px;
     display: block;
     text-align: center;
+}
+.footer-logo-sp {/* スマホ用ロゴ非表示 */
+    display: none;
+}
+/* footerのレスポンシブ */
+@media (max-width:375px) {
+    footer {
+        position: absolute;
+        top: 2040px;
+        margin-bottom: 56px;
+    }
+    .footer-wrapper {
+        height: 240px;
+        margin-top: 0;
+    }
+    .footer-nav {
+        display: none;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .footer-logo-sp {
+        display: block;
+        width: 52px;
+        height: 32px;
+        margin: 72px 162px 82px;
+    }
+    .footer-wrapper small {
+        margin: 0 147px 32px;
+        font-size: 10px;
+    }
 }
